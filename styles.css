@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap");
+  
   /* universal selector */
   *{
-    margin:0;
+    margin:0;  
     padding:0;
     /* box-sizing: border-box; */
     font-family:"be veitnam pro",sans-serif;
@@ -67,6 +69,17 @@
   .nav-items div:hover{
     transition:0.8s;  
    font-weight: bold;
+  }
+
+  @media (max-width: 1500px) {
+    .nav-items {
+      padding: 0 8em;
+    }
+  }
+  @media (max-width: 1000px) {
+    .nav-items {
+      display: none;
+    }
   }
 
 .hero-section{
@@ -278,7 +291,37 @@
         left:45%;
     }
   }
+   
+  @media (max-width: 1300px) {
+    .hero-section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: -1rem;
+      padding-bottom: 3rem;
+    }
+    .hero-section-description {
+      text-align: center;
+      margin: auto;
+    }
+    .faded-text {
+      display: none;
+    }
+    #btn {
+      display: none;
+    }
+    #btn-bottom {
+      margin-top: -7rem;
+      display: block;
+    }
+    .hero-section-right {
+      margin-top: -6em;
+      scale: 0.7;
+    }
+  }
 
+  /* project-section */
   .project-section{
      /* width:100%; */
      background-color: rgb(190, 185, 185);
@@ -438,22 +481,80 @@
  }
 
  #project1{
-  background-image: url(./projects/Project1.png);
+  /* background-image: url(./projects/Project1.png); */
+  background-image: url(./projects/banner1.jpg);
  }
  #project2{
   /* 120 is 10% of 1200 px  */
   margin-left:120px;
-  background-image: url(./projects/Project2.png);
+  /* background-image: url(./projects/Project2.png); */
+  background-image: url(./projects/raspberries-2023404_1280.jpg);
  }
  #project3{
-  background-image: url(./projects/Project3.png);
+  background-image: url(./images/jusplay_movie_streaming_app_flutter_2_3dfd9cbbfc.jpg);
  }
- #project4{
+ /* #project4{
   margin-left:120px;
   background-image: url(./projects/Project4.png);
- }
+ } */
 
- /* have to add media queries */
+ @media (max-width: 1300px) {
+  .page-header {
+    padding-top: 30px;
+    color: var(--bgOrange);
+    text-align: center;
+    font-size: 40px;
+  }
+  .project-container {
+    padding: 5px;
+    margin: 10px;
+    gap: 60px;
+  }
+  .project-cards {
+    width: 100%;
+    height: 300px;
+  }
+  .project-cards {
+    background-size: cover;
+    background-position: center;
+  }
+  .project-content {
+    scale: 0.5;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+  }
+  .project-content-left {
+    left: 0;
+  }
+  .project-heading {
+    font-size: 40px;
+    width: 100%;
+  }
+  .project-subheading {
+    width: 100%;
+  }
+
+  #project2 {
+    margin-left: 0;
+  }
+  #project4 {
+    margin-left: 0;
+  }
+  .project-skills-container {
+    width: 100%;
+  }
+  .project-skills {
+    width: 35px;
+  }
+  .project-cards:hover .project-number {
+    display: none;
+  }
+  .project-cards:hover .project-content {
+    scale: 0.55;
+  }
+}
 
  .skills-container{
   position: relative;
@@ -502,8 +603,7 @@
   }
 }
 
-.skills-logo{
-    
+.skills-logo{  
   width:90px;
   transition:all 0.5s;
   z-index:10;
@@ -532,6 +632,48 @@
 .skill-subheading p{
   margin:15px 0;
 }
+
+@media (max-width: 1300px) {
+  .skills-container {
+    margin: 0;
+    padding: 2em;
+    flex-direction: column;
+  }
+  .skill-heading {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .caps {
+    font-size: 60px;
+  }
+  .skill-container-left {
+    width: 100%;
+  }
+  .skill-container-right {
+    /* direction: flex;
+    flex-wrap:wrap; */
+    width: 90%;
+  }
+  .skills-logo {
+    width: 50px;
+  }
+  .skill-faded-text {
+    display: none;
+  }
+  .skill-subheading {
+    width:90% ;
+    margin-right:2vw ;
+  }
+  .skill-heading::after {
+    bottom: 9%;
+  }
+  .skill-subheading p{
+    width:90%;
+  }
+
+ 
+}
+
 /* we have removed box-size:border box from .conatiner class at above then 5boxes are coming in 1line  */
 
 .contactus-form-container{
@@ -607,6 +749,44 @@
   font-size:1.5rem;
 }
 
+@media (max-width: 1300px) {
+  .contactus-heading {
+    font-size: 40px;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  #submit-btn {
+    border: none;
+    font-size: 1rem;
+
+    margin: 1rem 0;
+  }
+
+  .contactus-subheading{
+    font-size: 20px;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .form {
+    max-width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+  .form-field-container {
+    /* display: flex;
+    align-items: center; */
+    width: 80%;
+  }
+  .formfield {
+    max-width: 90%;
+
+    /* display: flex;
+    align-items: center; */
+  }
+}
+
+
 
 footer{
   /* so that we can set the faded text absolute  */
@@ -642,9 +822,27 @@ footer{
 }
 .link-wrapper div a:hover{
   color:var(--bgorange);
+  text-decoration:none;
 }
 
 .icon-wrapper{
 display:flex;
 gap:1rem;
+}
+
+@media (max-width: 1300px) {
+  .container{
+    width: 100%;
+  }
+
+  footer {
+    padding:0.5rem;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-faded-text {
+    display: none;
+  }
 }
